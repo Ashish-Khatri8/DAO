@@ -6,16 +6,10 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 
 contract Treasury is Ownable {
-
-    uint256 weiBalance;
-
-    receive() external payable {
-        weiBalance += msg.value;
-    }
+    receive() external payable {}
 
     function sendEther(address payable _to, uint256 _weiAmount) external onlyOwner {
-        require(weiBalance >= _weiAmount, "Insufficient balance!");
-        weiBalance -= _weiAmount;
+        require(address(this).balance >= _weiAmount, "Insufficient balance!");
         payable(_to).transfer(_weiAmount);
     }
 
