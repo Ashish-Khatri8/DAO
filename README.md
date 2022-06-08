@@ -107,10 +107,22 @@ It takes the address and the amount of tokens to mint as arguments.
 - After that, when the delay period has passed, any user can interact with the **execute()** function which will execute the proposal and the funds will be sent to the charity.
 
 ---
+---
 
-<!-- <div align = center margin = auto>
-    <img src = "transaction_images/swapBlazeToken.png" width = 75%>
-</div> -->
+### Example Proposal
+
+- Created a proposal to send 3 ethers from the Treasury to an address.
+- Voting was done and the proposal passed.
+- Then it was queued for execution.
+- After that, the proposal was executed and funds were successfully transferred from the Treasury contract.
+
+<div align = center margin = auto>
+    <img src = "transaction_images/dao_txns.png" width = 85%>
+</div>
+
+<div align = center margin = auto>
+    <img src = "transaction_images/proposal_execution.png" width = 85%>
+</div>
 
 ---
 
